@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>TP juvejersey</title>
+</head>
+<body>
+    <h1>TP juvejersey</h1>
+    <div id="app">
+        <div id="photoArea">
+            <img [src]='loadImage' />
+            <div id="thumbs">
+                <img (click)="zoom()" [src]='srcPath1' />
+                <img (click)="zoom()" [src]='srcPath2' /> 
+                <img (click)="zoom()" [src]='srcPath3' /> 
+                <img (click)="zoom()" [src]='srcPath4' /> 
+            </div>
+        </div>
+        <div id="settingArea">
+            <h2>Juventus Home Authentic Jersey 2020/21</h2>
+            <section>
+                <h3>Flocking</h3>
+                <span class="flock selected" (click)="flockage()" [ngClass]="{'flock selected': isOff}" [ngStyle]="{'color': color, 'border-color':bordercolor}">No flock</span>
+                <span class="flock" (click)="flockage()"  >Players</span>
+                <select class="flock" *ngIf="menu">
+                    <option value="1">3 - CHIELLINI</option>
+                    <option value="2">4 - DE LIGT</option>
+                    <option value="3">5 - ARTHUR</option>
+                    <option value="4">6 - KHEDIRA</option>
+                    <option value="5">7 - RONALDO</option>
+                    <option value="6">8 - RAMSEY</option>
+                    <option value="7">9 - MORATA</option>
+                    <option value="8">10 - DYBALA</option>
+                    <option value="9">12 - ALEX SANDRO</option>
+                </select>
+            </section>
+            <section>
+                <h3>Badges</h3>
+                <div id="badges">
+                    <img [src]='srcPath5' >
+                    <img [src]='srcPath6'>
+                    <img [src]='srcPath7'>
+                </div>
+                <div id="badgesSelector">
+                    <input type="checkbox" />
+                    <input type="checkbox" />
+                    <input type="checkbox" />
+                </div>
+            </section>
+            <section>
+                <h3>Quantity</h3>
+                <select>
+                    <option value="1">1</option>
+                    <option value="2">2</option>
+                    <option value="3">3</option>
+                    <option value="4">4</option>
+                    <option value="5">5</option>
+                </select>
+            </section>
+            <section>
+                <h3>Total price</h3>
+            </section>
+        </div>
+    </div>
+</body>
+</html>
